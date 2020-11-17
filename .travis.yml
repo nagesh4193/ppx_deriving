@@ -16,13 +16,16 @@ env:
       ppx_deriving_protobuf
       ppx_deriving_morphism
       visitors"
-  matrix:
-  - OCAML_VERSION=4.11
-  - OCAML_VERSION=4.10
-  - OCAML_VERSION=4.09
-  - OCAML_VERSION=4.08
-  - OCAML_VERSION=4.07
-  - OCAML_VERSION=4.06
-  - OCAML_VERSION=4.05
+ ocaml_version:
+            - 4.11
+            - 4.10
+            - 4.09
+            - 4.08
+            - 4.07
+            - 4.06
+            - 4.05
+ arch:
+  - amd64
+  - ppc64le
 os:
   - linux
