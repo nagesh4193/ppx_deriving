@@ -1,6 +1,9 @@
 language: c
 sudo: false
 dist: xenial
+arch:
+  - amd64
+  - ppc64le
 install: wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 script: bash -ex .travis-opam.sh
 env:
@@ -24,20 +27,5 @@ env:
   - OCAML_VERSION=4.07
   - OCAML_VERSION=4.06
   - OCAML_VERSION=4.05
-  #Adding the Power support
-  - arch: ppc64le
-    OCAML_VERSION=4.11
-  - arch: ppc64le
-    OCAML_VERSION=4.10
-  - arch: ppc64le
-    OCAML_VERSION=4.09
-  - arch: ppc64le
-    OCAML_VERSION=4.08
-  - arch: ppc64le
-    OCAML_VERSION=4.07
-  - arch: ppc64le
-    OCAML_VERSION=4.06
-  - arch: ppc64le
-    OCAML_VERSION=4.05
 os:
   - linux
